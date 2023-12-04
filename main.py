@@ -5,7 +5,7 @@ def challenge_one():
     try:
         #pedimos el tamaño del vector y verificamos que sea menor a 100
         n = int(input("Ingrese la cantidad de digitos dentro de su vector (menor a 100): "))
-        if(n<=100):
+        if(n<=100 and n >0):
             #un ciclo para pedir los digitos
             while len(vectorEntrada)<n:
 
@@ -26,7 +26,7 @@ def challenge_one():
             print (vectorEntrada)
             print (vectorSalida)
         else:
-            print("Usted escribio un numero mayor a 100, la entrada no es valida ")
+            print("Usted escribio un numero mayor a 100 o menor a 0 , la entrada no es valida ")
     except Exception as e:
         print('digitaste un valor incorrecto ')
 
@@ -46,7 +46,7 @@ def challenge_two():
 
             for e in vectorEntrada:
                     cuadrado=pow(int(e),2)
-                    if cuadrado<=36:
+                    if cuadrado<=66:
                         vectorSalida.append(cuadrado)
             print(vectorSalida)
             # el primer for comprueba que los numeros esten en la posicion correcta
